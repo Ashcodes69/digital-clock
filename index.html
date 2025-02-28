@@ -11,6 +11,14 @@
     <div id="date-box"></div>
     <div id="time-box"></div>
   </div>
+  <div class="alarm-container">
+    <p id="msg">Tell me in how much time you want to get alert</p>
+    <input id="inp" type="range" min="1" max="60" value="5">
+    <output id="output">5</output>
+    <button id="set">Set</button>
+    <button id="reset">Reset</button>
+  </div>
+  <audio src="alarm.wav" id="alarm"></audio>
   <script src="script.js">
   </script>
 </body>

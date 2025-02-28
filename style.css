@@ -1,5 +1,7 @@
+/* General Styling */
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -7,14 +9,18 @@ body {
   color: #00ff00; /* Neon Green */
   font-family: 'Courier New', monospace;
   text-align: center;
+  margin: 0;
 }
 
+/* Digital Clock Container */
 .container {
   padding: 20px;
   border-radius: 10px;
   background: rgba(0, 255, 0, 0.1); /* Slight green tint */
   box-shadow: 0px 0px 15px #00ff00; /* Glowing Effect */
   border: 2px solid #00ff00;
+  margin-bottom: 30px; /* Added space to avoid overlap */
+  width: 300px;
 }
 
 #date-box {
@@ -28,12 +34,88 @@ body {
   font-weight: bold;
 }
 
-/* @keyframes glow {
-  0% { text-shadow: 0 0 5px #00ff00; }
-  50% { text-shadow: 0 0 15px #00ff00; }
-  100% { text-shadow: 0 0 5px #00ff00; }
+/* Alarm Container */
+.alarm-container {
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(0, 255, 0, 0.1);
+  box-shadow: 0px 0px 15px #00ff00;
+  border: 2px solid #00ff00;
+  width: 320px;
 }
 
-#time-box, #date-box {
-  animation: glow 5s infinite alternate;
-} */
+#msg {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Range Input Styling */
+#inp {
+  width: 100%;
+  margin: 10px 0;
+  appearance: none;
+  background: transparent;
+}
+
+/* Range Track */
+#inp::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  background: #00ff00;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #00ff00;
+}
+
+/* Range Thumb */
+#inp::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #00ff00;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -5px;
+}
+
+#output {
+  display: block;
+  font-size: 1.5rem;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+/* Set Alarm Button */
+#set {
+  padding: 10px 20px;
+  background: black;
+  color: #00ff00;
+  border: 2px solid #00ff00;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  box-shadow: 0px 0px 10px #00ff00;
+}
+
+#set:hover {
+  background: #00ff00;
+  color: black;
+  box-shadow: 0px 0px 20px #00ff00;
+}
+#reset{
+  padding: 10px 20px;
+  background: black;
+  color: #00ff00;
+  border: 2px solid #00ff00;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  box-shadow: 0px 0px 10px #00ff00;
+}
+#reset:hover {
+  background: #00ff00;
+  color: black;
+  box-shadow: 0px 0px 20px #00ff00;
+}
